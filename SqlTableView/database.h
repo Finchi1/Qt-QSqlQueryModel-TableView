@@ -11,7 +11,7 @@
 #include <QString>
 
 /* Directives for table names, table fields, and database fields */
-/* Директивы имен таблицы, полей таблицы и базы данных */
+/* Р”РёСЂРµРєС‚РёРІС‹ РёРјРµРЅ С‚Р°Р±Р»РёС†С‹, РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ Рё Р±Р°Р·С‹ РґР°РЅРЅС‹С… */
 const QString DATABASE_HOSTNAME = "ExampleDataBase";
 const QString DATABASE_NAME = "example.db";
 
@@ -33,4 +33,3 @@ public:
 private:
     QSqlDatabase mDb;
 };
-
