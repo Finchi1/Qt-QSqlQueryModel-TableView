@@ -17,7 +17,7 @@ public:
     explicit Model(QObject* parent = nullptr);
 
     // Override the method that will return data
-    // Переопределяем метод, который будет возвращать данные
+    // РџРµСЂРµРѕРїСЂРµРґРµР»СЏРµРј РјРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РІРѕР·РІСЂР°С‰Р°С‚СЊ РґР°РЅРЅС‹Рµ
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
 
 protected:
@@ -25,11 +25,10 @@ protected:
     * The method is used in the wilds of the QAbstractItemModel base class,
     * from which the QSqlQueryModel class is inherited
     * */
-    /* хешированная таблица ролей для колонок.
-     * Метод используется в дебрях базового класса QAbstractItemModel,
-     * от которого наследован класс QSqlQueryModel
+    /* С…РµС€РёСЂРѕРІР°РЅРЅР°СЏ С‚Р°Р±Р»РёС†Р° СЂРѕР»РµР№ РґР»СЏ РєРѕР»РѕРЅРѕРє.
+     * РњРµС‚РѕРґ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РґРµР±СЂСЏС… Р±Р°Р·РѕРІРѕРіРѕ РєР»Р°СЃСЃР° QAbstractItemModel,
+     * РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ РЅР°СЃР»РµРґРѕРІР°РЅ РєР»Р°СЃСЃ QSqlQueryModel
      * */
     QHash<int, QByteArray> roleNames() const override;
     QStringList userRoleNames() const;
 };
-
