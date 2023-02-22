@@ -7,13 +7,6 @@ class Model : public QSqlQueryModel
 {
     Q_OBJECT
 public:
-    enum Roles {
-        DateRole = Qt::UserRole + 1, // Date
-        TimeRole,                    // Time
-        MessageRole,                 // Message
-        RandomRole                   // Random
-    };
-
     explicit Model(QObject* parent = nullptr);
 
     // Override the method that will return data
@@ -30,5 +23,4 @@ protected:
      * от которого наследован класс QSqlQueryModel
      * */
     QHash<int, QByteArray> roleNames() const override;
-    QStringList userRoleNames() const;
 };
