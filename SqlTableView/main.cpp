@@ -15,20 +15,20 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     // Initialize the database
-    // Èíèöèàëèçèðóåì áàçó äàííûõ
+    // Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÐ¼ Ð±Ð°Ð·Ñƒ Ð´Ð°Ð½Ð½Ñ‹Ñ…
     DataBase db;
 
     // We declare and initialize the data representation model
-    // Îáúÿâëÿåì è èíèöèàëèçèðóåì ìîäåëü ïðåäñòàâëåíèÿ äàííûõ
+    // ÐžÐ±ÑŠÑÐ²Ð»ÑÐµÐ¼ Ð¸ Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÐ¼ Ð¼Ð¾Ð´ÐµÐ»ÑŒ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð´Ð°Ð½Ð½Ñ‹Ñ…
     Model* model = new Model();
 
     /* Since We have inherited from QSqlQueryModel, then
     * to fetch data, we need to execute a SQL query,
     * in which we will select all the required fields from the table we need
     * */
-    /* Ïîñêîëüêó Ìû îòíàñëåäîâàëèñü îò QSqlQueryModel, òî
-     * äëÿ âûáîðêè äàííûõ íàì íåîáõîäèìî âûïîëíèòü SQL-çàïðîñ,
-     * â êîòîðîì ìû âûáåðåì âñå íåîáõîäèìû ïîëÿ èç íóæíîé íàì òàáëèöû
+    /* ÐŸÐ¾ÑÐºÐ¾Ð»ÑŒÐºÑƒ ÐœÑ‹ Ð¾Ñ‚Ð½Ð°ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð»Ð¸ÑÑŒ Ð¾Ñ‚ QSqlQueryModel, Ñ‚Ð¾
+     * Ð´Ð»Ñ Ð²Ñ‹Ð±Ð¾Ñ€ÐºÐ¸ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð½Ð°Ð¼ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð²Ñ‹Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ SQL-Ð·Ð°Ð¿Ñ€Ð¾Ñ,
+     * Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼ Ð¼Ñ‹ Ð²Ñ‹Ð±ÐµÑ€ÐµÐ¼ Ð²ÑÐµ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ñ‹ Ð¿Ð¾Ð»Ñ Ð¸Ð· Ð½ÑƒÐ¶Ð½Ð¾Ð¹ Ð½Ð°Ð¼ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹
      * */
 
     model->setQuery("SELECT " + TABLE_DATE + ", " + TABLE_TIME + ", " + TABLE_MESSAGE + ", " + TABLE_RANDOM + " FROM " + TABLE);
@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
     * We place the resulting model in the QML context so that it is possible
     * refer to the model named "myModel"
     * */
-    /* À ýòî óæå çíàêîìî èç óðîêîâ ïî ñèãíàëàì è ñëîòàì â QML
-     * Ïîìåùàåì ïîëó÷åííóþ ìîäåëü â êîíòåêñò QML, ÷òîáû áûëà âîçìîæíîñòü
-     * îáðàùàòüñÿ ê ìîäåëè ïî èìåíè "myModel"
+    /* Ð ÑÑ‚Ð¾ ÑƒÐ¶Ðµ Ð·Ð½Ð°ÐºÐ¾Ð¼Ð¾ Ð¸Ð· ÑƒÑ€Ð¾ÐºÐ¾Ð² Ð¿Ð¾ ÑÐ¸Ð³Ð½Ð°Ð»Ð°Ð¼ Ð¸ ÑÐ»Ð¾Ñ‚Ð°Ð¼ Ð² QML
+     * ÐŸÐ¾Ð¼ÐµÑ‰Ð°ÐµÐ¼ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð½ÑƒÑŽ Ð¼Ð¾Ð´ÐµÐ»ÑŒ Ð² ÐºÐ¾Ð½Ñ‚ÐµÐºÑÑ‚ QML, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð±Ñ‹Ð»Ð° Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ
+     * Ð¾Ð±Ñ€Ð°Ñ‰Ð°Ñ‚ÑŒÑÑ Ðº Ð¼Ð¾Ð´ÐµÐ»Ð¸ Ð¿Ð¾ Ð¸Ð¼ÐµÐ½Ð¸ "myModel"
      * */
 
     engine.rootContext()->setContextProperty("myModel", model);
