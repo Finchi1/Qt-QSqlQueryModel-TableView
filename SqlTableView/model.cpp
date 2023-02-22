@@ -9,7 +9,7 @@ Model::Model(QObject* parent)
 }
 
 // Method for getting data from the model (standard code from documentation example)
-// Метод для получения данных из модели (стандартный код из примера в документации)
+// РњРµС‚РѕРґ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РґР°РЅРЅС‹С… РёР· РјРѕРґРµР»Рё (СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РєРѕРґ РёР· РїСЂРёРјРµСЂР° РІ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё)
 QVariant Model::data(const QModelIndex& index, int role) const
 {
     QVariant value;
@@ -26,12 +26,12 @@ QVariant Model::data(const QModelIndex& index, int role) const
 }
 
 // Method for getting role names via hashed table (standard code from documentation example)
-// Метод для получения имен ролей через хешированную таблицу  (стандартный код из примера в документации)
+// РњРµС‚РѕРґ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РёРјРµРЅ СЂРѕР»РµР№ С‡РµСЂРµР· С…РµС€РёСЂРѕРІР°РЅРЅСѓСЋ С‚Р°Р±Р»РёС†Сѓ  (СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РєРѕРґ РёР· РїСЂРёРјРµСЂР° РІ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё)
 QHash<int, QByteArray> Model::roleNames() const
 {
     // It's important that you set this
     // otherwise the display won't work in QML
-    // Важно, чтобы вы установили это
-    // В противном случае отображение не будет работать в QML
+    // Р’Р°Р¶РЅРѕ, С‡С‚РѕР±С‹ РІС‹ СѓСЃС‚Р°РЅРѕРІРёР»Рё СЌС‚Рѕ
+    // Р’ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РЅРµ Р±СѓРґРµС‚ СЂР°Р±РѕС‚Р°С‚СЊ РІ QML
     return { {Qt::DisplayRole, "display"} };
 }
