@@ -33,12 +33,10 @@ int main(int argc, char *argv[])
 
     model->setQuery("SELECT " + TABLE_DATE + ", " + TABLE_TIME + ", " + TABLE_MESSAGE + ", " + TABLE_RANDOM + " FROM " + TABLE);
 
-    /* And this is already familiar from the lessons on signals and slots in QML
-    * We place the resulting model in the QML context so that it is possible
+    /* We place the resulting model in the QML context so that it is possible
     * refer to the model named "myModel"
     * */
-    /* А это уже знакомо из уроков по сигналам и слотам в QML
-     * Помещаем полученную модель в контекст QML, чтобы была возможность
+    /* Помещаем полученную модель в контекст QML, чтобы была возможность
      * обращаться к модели по имени "myModel"
      * */
 
